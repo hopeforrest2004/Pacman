@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/emircalvillo/.gradle/daemon/8.9/com.example.pacman.app-mergeDebugResources-42:/layout/activity_high_scores.xml",
+        "source": "/Users/emircalvillo/.gradle/daemon/8.9/com.example.pacman.app-main-45:/layout/activity_high_scores.xml"
+    },
+    {
+        "merged": "/Users/emircalvillo/.gradle/daemon/8.9/com.example.pacman.app-mergeDebugResources-42:/layout/content_high_scores.xml",
+        "source": "/Users/emircalvillo/.gradle/daemon/8.9/com.example.pacman.app-main-45:/layout/content_high_scores.xml"
+    },
+    {
+        "merged": "com.example.pacman.app-mergeDebugResources-42:/layout/activity_high_scores.xml",
+        "source": "com.example.pacman.app-main-45:/layout/activity_high_scores.xml"
+    },
+    {
+        "merged": "com.example.pacman.app-mergeDebugResources-42:/layout/activity_death_scene.xml",
+        "source": "com.example.pacman.app-main-45:/layout/activity_death_scene.xml"
+    },
+    {
+        "merged": "com.example.pacman.app-mergeDebugResources-42:/layout/activity_gameplay.xml",
+        "source": "com.example.pacman.app-main-45:/layout/activity_gameplay.xml"
+    },
+    {
+        "merged": "com.example.pacman.app-mergeDebugResources-42:/layout/activity_intro.xml",
+        "source": "com.example.pacman.app-main-45:/layout/activity_intro.xml"
+    },
+    {
+        "merged": "/Users/emircalvillo/.gradle/daemon/8.9/com.example.pacman.app-mergeDebugResources-42:/layout/activity_gameplay.xml",
+        "source": "/Users/emircalvillo/.gradle/daemon/8.9/com.example.pacman.app-main-45:/layout/activity_gameplay.xml"
+    },
+    {
+        "merged": "/Users/emircalvillo/.gradle/daemon/8.9/com.example.pacman.app-mergeDebugResources-42:/layout/activity_main.xml",
+        "source": "/Users/emircalvillo/.gradle/daemon/8.9/com.example.pacman.app-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/emircalvillo/.gradle/daemon/8.9/com.example.pacman.app-mergeDebugResources-42:/layout/content_gameplay.xml",
+        "source": "/Users/emircalvillo/.gradle/daemon/8.9/com.example.pacman.app-main-45:/layout/content_gameplay.xml"
+    }
+]
