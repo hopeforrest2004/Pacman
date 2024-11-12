@@ -13,6 +13,24 @@
         android:theme="@style/Theme.Pacman"
         tools:targetApi="31">
         <activity
+            android:name=".DeathScene"
+            android:exported="false" />
+        <activity
+            android:name=".Intro"
+            android:exported="false"
+            android:theme="@style/Theme.Pacman" />
+        <activity
+            android:name=".Gameplay"
+            android:exported="false"
+            android:theme="@style/Theme.Pacman" />
+        <activity
+            android:name=".HighScores"
+            android:exported="false"
+            android:theme="@style/Theme.Pacman" />
+        <activity
+            android:name=".StartMenu"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
