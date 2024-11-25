@@ -1,6 +1,6 @@
 [
   {
-    "name": "nav_graph4",
+    "name": "nav_graph",
     "navigationXmlIds": [],
     "deepLinks": []
   },
@@ -10,12 +10,12 @@
     "deepLinks": []
   },
   {
-    "name": "nav_graph",
+    "name": "nav_graph3",
     "navigationXmlIds": [],
     "deepLinks": []
   },
   {
-    "name": "nav_graph3",
+    "name": "nav_graph4",
     "navigationXmlIds": [],
     "deepLinks": []
   }

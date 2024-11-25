@@ -4,24 +4,54 @@ package com.example.pacman.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.pacman.R;
+import com.example.pacman.view.GameView;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityGameplayBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button dpadDown;
+
+  @NonNull
+  public final Button dpadLeft;
+
+  @NonNull
+  public final Button dpadRight;
+
+  @NonNull
+  public final Button dpadUp;
+
+  @NonNull
+  public final GameView gameView;
+
+  @NonNull
+  public final ImageView imageView3;
+
+  @NonNull
   public final ConstraintLayout main;
 
-  private ActivityGameplayBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout main) {
+  private ActivityGameplayBinding(@NonNull ConstraintLayout rootView, @NonNull Button dpadDown,
+      @NonNull Button dpadLeft, @NonNull Button dpadRight, @NonNull Button dpadUp,
+      @NonNull GameView gameView, @NonNull ImageView imageView3, @NonNull ConstraintLayout main) {
     this.rootView = rootView;
+    this.dpadDown = dpadDown;
+    this.dpadLeft = dpadLeft;
+    this.dpadRight = dpadRight;
+    this.dpadUp = dpadUp;
+    this.gameView = gameView;
+    this.imageView3 = imageView3;
     this.main = main;
   }
 
@@ -48,12 +78,52 @@ public final class ActivityGameplayBinding implements ViewBinding {
 
   @NonNull
   public static ActivityGameplayBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.dpad_down;
+      Button dpadDown = ViewBindings.findChildViewById(rootView, id);
+      if (dpadDown == null) {
+        break missingId;
+      }
+
+      id = R.id.dpad_left;
+      Button dpadLeft = ViewBindings.findChildViewById(rootView, id);
+      if (dpadLeft == null) {
+        break missingId;
+      }
+
+      id = R.id.dpad_right;
+      Button dpadRight = ViewBindings.findChildViewById(rootView, id);
+      if (dpadRight == null) {
+        break missingId;
+      }
+
+      id = R.id.dpad_up;
+      Button dpadUp = ViewBindings.findChildViewById(rootView, id);
+      if (dpadUp == null) {
+        break missingId;
+      }
+
+      id = R.id.gameView;
+      GameView gameView = ViewBindings.findChildViewById(rootView, id);
+      if (gameView == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView3;
+      ImageView imageView3 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView3 == null) {
+        break missingId;
+      }
+
+      ConstraintLayout main = (ConstraintLayout) rootView;
+
+      return new ActivityGameplayBinding((ConstraintLayout) rootView, dpadDown, dpadLeft, dpadRight,
+          dpadUp, gameView, imageView3, main);
     }
-
-    ConstraintLayout main = (ConstraintLayout) rootView;
-
-    return new ActivityGameplayBinding((ConstraintLayout) rootView, main);
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }
