@@ -17,12 +17,15 @@ import android.view.SurfaceView;
 import androidx.annotation.NonNull;
 
 import com.example.pacman.R;
+import com.example.pacman.model.Ghost;
 import com.example.pacman.model.PacmanPosition;
 
 public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     private PacmanPosition pacmanPosition;
+    private Ghost ghost;
     private Bitmap pacmanBitmap;
+    private Bitmap ghostBitmap;
     private int viewWidth;
     private int viewHeight;
 
@@ -59,6 +62,14 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
             Log.d("GameView", "Pacman Bitmap loaded: Width=" + pacmanBitmap.getWidth() + ", Height=" + pacmanBitmap.getHeight());
         }
 
+        ghostBitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.ghost);
+        ghostBitmap = Bitmap.createScaledBitmap(ghostBitmap, 100, 100, false);
+        if (ghostBitmap == null) {
+            Log.e("GameView", "Ghost Bitmap failed to load!");
+        } else {
+            Log.d("GameView", "Ghost Bitmap loaded: Width=" + ghostBitmap.getWidth() + ", Height=" + ghostBitmap.getHeight());
+        }
+
         setZOrderOnTop(true);
         getHolder().setFormat(android.graphics.PixelFormat.TRANSLUCENT);
     }
@@ -76,6 +87,14 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         }
     }
 
+    public void setGhostPosition(Ghost ghost) {
+        this.ghost = ghost;
+
+        if (viewWidth > 0 && viewHeight > 0) {
+            ghost.setGhostX(viewWidth / 3 );
+            ghost.setGhostY(viewHeight - 50);
+        }
+    }
     /**
      * Called when the surface is created.
      * @param holder The SurfaceHolder whose surface is being created.
@@ -144,5 +163,12 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         // Adjust position to center the bitmap at the Pacman coordinates
         canvas.drawBitmap(pacmanBitmap, x - pacmanBitmap.getWidth() / 2, y - pacmanBitmap.getHeight() / 2, null);
         Log.d("GameView", "Pacman drawn successfully.");
+        x = ghost.getGhostX();
+        y = ghost.getGhostY();
+
+        Log.d("GameView", "onDraw called: Drawing Ghost at: X=" + x + ", Y=" + y);
+        // Adjust position to center the bitmap at the Ghost coordinates
+        canvas.drawBitmap(ghostBitmap, x - ghostBitmap.getWidth() / 3, y - ghostBitmap.getHeight() / 3, null);
+        Log.d("GameView", "Ghost drawn successfully.");
     }
 }

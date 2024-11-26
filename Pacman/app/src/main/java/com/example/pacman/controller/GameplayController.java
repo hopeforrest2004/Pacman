@@ -8,11 +8,13 @@ import android.graphics.Canvas;
 import android.util.Log;
 import android.view.SurfaceHolder;
 
+import com.example.pacman.model.Ghost;
 import com.example.pacman.model.PacmanPosition;
 import com.example.pacman.view.GameView;
 
 public class GameplayController {
     private final PacmanPosition pacmanPosition;
+    private final Ghost ghost;
     private final GameView gameView;
 
     /**
@@ -20,10 +22,12 @@ public class GameplayController {
      * @param pacmanPosition The Pacman position.
      * @param gameView The GameView.
      */
-    public GameplayController(PacmanPosition pacmanPosition, GameView gameView) {
+    public GameplayController(PacmanPosition pacmanPosition, Ghost ghost, GameView gameView) {
         this.pacmanPosition = pacmanPosition;
+        this.ghost = ghost;
         this.gameView = gameView;
-        this.gameView.setPacmanPosition(pacmanPosition);  // Set the shared position
+        this.gameView.setPacmanPosition(pacmanPosition);
+        this.gameView.setGhostPosition(ghost);// Set the shared position
     }
 
     /**
@@ -41,5 +45,6 @@ public class GameplayController {
         Canvas canvas = holder.lockCanvas();
         gameView.draw(canvas);
         holder.unlockCanvasAndPost(canvas);
+
     }
 }
