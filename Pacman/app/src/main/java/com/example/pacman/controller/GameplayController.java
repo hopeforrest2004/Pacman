@@ -26,8 +26,6 @@ public class GameplayController {
         this.pacmanPosition = pacmanPosition;
         this.ghost = ghost;
         this.gameView = gameView;
-        this.gameView.setPacmanPosition(pacmanPosition);
-        this.gameView.setGhostPosition(ghost);// Set the shared position
     }
 
     /**
@@ -35,16 +33,10 @@ public class GameplayController {
      * @param dx The amount to move in the X-direction.
      * @param dy The amount to move in the Y-direction.
      */
-    public void movePacman(float dx, float dy) {
+    public void movePacman(int dx, int dy) {
         Log.d("GameplayController", "movePacman called with dx=" + dx + ", dy=" + dy);
         pacmanPosition.movePacman(dx, dy);
         Log.d("GameplayController", "Pacman's new position: x=" + pacmanPosition.getPacmanX() + ", y=" + pacmanPosition.getPacmanY());
-
-        // Force canvas redraw
-        SurfaceHolder holder = gameView.getHolder();
-        Canvas canvas = holder.lockCanvas();
-        gameView.draw(canvas);
-        holder.unlockCanvasAndPost(canvas);
 
     }
 }

@@ -6,15 +6,15 @@
 package com.example.pacman.model;
 
 public class PacmanPosition {
-    private float pacmanX;
-    private float pacmanY;
+    private int pacmanX;
+    private int pacmanY;
 
     /**
      * Constructor for the PacmanPosition class.
      * @param pacmanX The initial X-coordinate of the Pacman character.
      * @param pacmanY The initial Y-coordinate of the Pacman character.
      */
-    public PacmanPosition(float pacmanX, float pacmanY) {
+    public PacmanPosition(int pacmanX, int pacmanY) {
         this.pacmanX = pacmanX;
         this.pacmanY = pacmanY;
     }
@@ -23,7 +23,7 @@ public class PacmanPosition {
      * Getter for the X-coordinate of the Pacman character.
      * @return The X-coordinate of the Pacman character.
      */
-    public float getPacmanX() {
+    public int getPacmanX() {
         return pacmanX;
     }
 
@@ -31,15 +31,16 @@ public class PacmanPosition {
      * Setter for the X-coordinate of the Pacman character.
      * @param pacmanX The new X-coordinate of the Pacman character.
      */
-    public void setPacmanX(float pacmanX) {
+    public void setPacmanX(int pacmanX) {
         this.pacmanX = pacmanX;
     }
 
     /**
      * Getter for the Y-coordinate of the Pacman character.
+     *
      * @return The Y-coordinate of the Pacman character.
      */
-    public float getPacmanY() {
+    public int getPacmanY() {
         return pacmanY;
     }
 
@@ -47,7 +48,7 @@ public class PacmanPosition {
      * Setter for the Y-coordinate of the Pacman character.
      * @param pacmanY The new Y-coordinate of the Pacman character.
      */
-    public void setPacmanY(float pacmanY) {
+    public void setPacmanY(int pacmanY) {
         this.pacmanY = pacmanY;
     }
 
@@ -56,7 +57,7 @@ public class PacmanPosition {
      * @param dx The amount to move in the X-direction.
      * @param dy The amount to move in the Y-direction.
      */
-    public void movePacman(float dx, float dy) {
+    public void movePacman(int dx, int dy) {
         pacmanX += dx;
         pacmanY += dy;
     }
