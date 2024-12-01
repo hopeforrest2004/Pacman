@@ -5,6 +5,22 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".Intro">
 
+    <ImageView
+        android:id="@+id/pacmanOpen"
+        android:layout_width="155dp"
+        android:layout_height="119dp"
+        app:srcCompat="@drawable/pacmanmouthopen"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <ImageView
+        android:id="@+id/pacmanClosed"
+        android:layout_width="158dp"
+        android:layout_height="121dp"
+        app:srcCompat="@drawable/pacmanclosed"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="194dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
