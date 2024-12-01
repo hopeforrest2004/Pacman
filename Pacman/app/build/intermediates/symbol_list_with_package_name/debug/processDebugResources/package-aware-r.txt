@@ -3141,6 +3141,14 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable pacmanclosed
+drawable pacmanhighscorebutton
+drawable pacmanlogo
+drawable pacmanmouthopen
+drawable pacmanmouthwide
+drawable pacmanstartbutton
+drawable pacmanstartscreenbackground
+drawable pacmanstartscreenimage1
 drawable temppacman
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -3370,6 +3378,7 @@ id groups
 id header_title
 id hide_ime_id
 id hideable
+id highscoreBtn
 id home
 id homeAsUp
 id honorRequest
@@ -3480,7 +3489,6 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
-id nextButton
 id noScroll
 id noState
 id none
@@ -3510,6 +3518,11 @@ id outline
 id outward
 id overshoot
 id packed
+id pacmanBackground
+id pacmanClosed
+id pacmanImageView
+id pacmanLogo
+id pacmanOpen
 id parallax
 id parent
 id parentPanel
@@ -3591,6 +3604,7 @@ id src_in
 id src_over
 id standard
 id start
+id startBtn
 id startHorizontal
 id startToEnd
 id startVertical
@@ -3622,7 +3636,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon

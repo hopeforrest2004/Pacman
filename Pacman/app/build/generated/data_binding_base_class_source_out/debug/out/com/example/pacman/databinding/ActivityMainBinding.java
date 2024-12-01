@@ -4,8 +4,8 @@ package com.example.pacman.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -21,20 +21,34 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageButton highscoreBtn;
+
+  @NonNull
   public final ConstraintLayout main;
 
   @NonNull
-  public final Button nextButton;
+  public final ImageView pacmanBackground;
 
   @NonNull
-  public final TextView textView;
+  public final ImageView pacmanImageView;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull ConstraintLayout main,
-      @NonNull Button nextButton, @NonNull TextView textView) {
+  @NonNull
+  public final ImageView pacmanLogo;
+
+  @NonNull
+  public final ImageButton startBtn;
+
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton highscoreBtn,
+      @NonNull ConstraintLayout main, @NonNull ImageView pacmanBackground,
+      @NonNull ImageView pacmanImageView, @NonNull ImageView pacmanLogo,
+      @NonNull ImageButton startBtn) {
     this.rootView = rootView;
+    this.highscoreBtn = highscoreBtn;
     this.main = main;
-    this.nextButton = nextButton;
-    this.textView = textView;
+    this.pacmanBackground = pacmanBackground;
+    this.pacmanImageView = pacmanImageView;
+    this.pacmanLogo = pacmanLogo;
+    this.startBtn = startBtn;
   }
 
   @Override
@@ -64,21 +78,40 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.highscoreBtn;
+      ImageButton highscoreBtn = ViewBindings.findChildViewById(rootView, id);
+      if (highscoreBtn == null) {
+        break missingId;
+      }
+
       ConstraintLayout main = (ConstraintLayout) rootView;
 
-      id = R.id.nextButton;
-      Button nextButton = ViewBindings.findChildViewById(rootView, id);
-      if (nextButton == null) {
+      id = R.id.pacmanBackground;
+      ImageView pacmanBackground = ViewBindings.findChildViewById(rootView, id);
+      if (pacmanBackground == null) {
         break missingId;
       }
 
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
+      id = R.id.pacmanImageView;
+      ImageView pacmanImageView = ViewBindings.findChildViewById(rootView, id);
+      if (pacmanImageView == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, main, nextButton, textView);
+      id = R.id.pacmanLogo;
+      ImageView pacmanLogo = ViewBindings.findChildViewById(rootView, id);
+      if (pacmanLogo == null) {
+        break missingId;
+      }
+
+      id = R.id.startBtn;
+      ImageButton startBtn = ViewBindings.findChildViewById(rootView, id);
+      if (startBtn == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((ConstraintLayout) rootView, highscoreBtn, main,
+          pacmanBackground, pacmanImageView, pacmanLogo, startBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

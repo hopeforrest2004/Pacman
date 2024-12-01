@@ -3,6 +3,7 @@ package com.example.pacman;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,10 +27,16 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button nextButton = findViewById(R.id.nextButton);
+        ImageButton startBtn = findViewById(R.id.startBtn);
+        ImageButton highscoreBtn = findViewById(R.id.highscoreBtn);
 
-        nextButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, Gameplay.class);
+        startBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, Intro.class);
+            startActivity(intent);
+        });
+
+        highscoreBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, HighScores.class);
             startActivity(intent);
         });
 
