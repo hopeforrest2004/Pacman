@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -40,11 +41,25 @@ public final class ActivityGameplayBinding implements ViewBinding {
   public final ImageView imageView3;
 
   @NonNull
+  public final TextView lives;
+
+  @NonNull
   public final ConstraintLayout main;
+
+  @NonNull
+  public final TextView score;
+
+  @NonNull
+  public final TextView textView3;
+
+  @NonNull
+  public final TextView textView5;
 
   private ActivityGameplayBinding(@NonNull ConstraintLayout rootView, @NonNull Button dpadDown,
       @NonNull Button dpadLeft, @NonNull Button dpadRight, @NonNull Button dpadUp,
-      @NonNull GameView gameView, @NonNull ImageView imageView3, @NonNull ConstraintLayout main) {
+      @NonNull GameView gameView, @NonNull ImageView imageView3, @NonNull TextView lives,
+      @NonNull ConstraintLayout main, @NonNull TextView score, @NonNull TextView textView3,
+      @NonNull TextView textView5) {
     this.rootView = rootView;
     this.dpadDown = dpadDown;
     this.dpadLeft = dpadLeft;
@@ -52,7 +67,11 @@ public final class ActivityGameplayBinding implements ViewBinding {
     this.dpadUp = dpadUp;
     this.gameView = gameView;
     this.imageView3 = imageView3;
+    this.lives = lives;
     this.main = main;
+    this.score = score;
+    this.textView3 = textView3;
+    this.textView5 = textView5;
   }
 
   @Override
@@ -118,10 +137,34 @@ public final class ActivityGameplayBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.lives;
+      TextView lives = ViewBindings.findChildViewById(rootView, id);
+      if (lives == null) {
+        break missingId;
+      }
+
       ConstraintLayout main = (ConstraintLayout) rootView;
 
+      id = R.id.score;
+      TextView score = ViewBindings.findChildViewById(rootView, id);
+      if (score == null) {
+        break missingId;
+      }
+
+      id = R.id.textView3;
+      TextView textView3 = ViewBindings.findChildViewById(rootView, id);
+      if (textView3 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView5;
+      TextView textView5 = ViewBindings.findChildViewById(rootView, id);
+      if (textView5 == null) {
+        break missingId;
+      }
+
       return new ActivityGameplayBinding((ConstraintLayout) rootView, dpadDown, dpadLeft, dpadRight,
-          dpadUp, gameView, imageView3, main);
+          dpadUp, gameView, imageView3, lives, main, score, textView3, textView5);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

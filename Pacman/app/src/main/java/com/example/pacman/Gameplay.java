@@ -4,11 +4,15 @@
  */
 package com.example.pacman;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -68,6 +72,18 @@ public class Gameplay extends AppCompatActivity {
                     default:
                         // No movement
                         break;
+                }
+                if (gameView.lives <= 0){
+                    gameView.lives = 3;
+                    Intent intent = new Intent(Gameplay.this, DeathScene.class);
+                    startActivity(intent);
+                }
+                if (gameView.score >= 263){
+                    gameView.score = 0;
+                    Intent intent = new Intent(Gameplay.this, MainActivity.class);
+                    Toast.makeText(Gameplay.this, "You win!", Toast.LENGTH_SHORT).show();
+                    startActivity(intent);
+                    finish();
                 }
                 // Schedule next execution
                 handler.postDelayed(this, 100); // Adjust speed with delay

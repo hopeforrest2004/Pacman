@@ -4,6 +4,7 @@ color black
 color white
 dimen fab_margin
 drawable dpad
+drawable ghost
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable pacmanclosed
@@ -34,6 +35,7 @@ id goToMain
 id highscoreBtn
 id imageView
 id imageView3
+id lives
 id main
 id nav_graph
 id nav_graph2
@@ -44,7 +46,10 @@ id pacmanImageView
 id pacmanLogo
 id pacmanOpen
 id redGhost
+id score
 id startBtn
+id textView3
+id textView5
 layout activity_death_scene
 layout activity_gameplay
 layout activity_high_scores

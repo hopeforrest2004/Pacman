@@ -4,7 +4,7 @@
             "outputFile": "com.example.pacman.app-mergeDebugResources-41:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\forre\\.gradle\\caches\\8.9\\transforms\\366ad302a5e3e5ae9395d41f6160e70a\\transformed\\appcompat-1.7.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\Users\\itsth\\.gradle\\caches\\8.9\\transforms\\366ad302a5e3e5ae9395d41f6160e70a\\transformed\\appcompat-1.7.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
