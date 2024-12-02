@@ -8,4 +8,138 @@
     android:background="@color/black"
     tools:context=".HighScores">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pacmanstartscreenbackground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_highscore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:fontFamily="@font/pixelify_sans_bold"
+            android:gravity="center"
+            android:text="HIGHSCORES"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/text_highscore_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:fontFamily="@font/pixelify_sans_bold"
+            android:gravity="center"
+            android:text="1. 0 AAA"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_highscore_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:fontFamily="@font/pixelify_sans_bold"
+            android:gravity="center"
+            android:text="1. 0 AAA"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_highscore_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:fontFamily="@font/pixelify_sans_bold"
+            android:gravity="center"
+            android:text="1. 0 AAA"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_highscore_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:fontFamily="@font/pixelify_sans_bold"
+            android:gravity="center"
+            android:text="1. 0 AAA"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_highscore_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:fontFamily="@font/pixelify_sans_bold"
+            android:gravity="center"
+            android:text="1. 0 AAA"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_highscore_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:fontFamily="@font/pixelify_sans_bold"
+            android:gravity="center"
+            android:text="1. 0 AAA"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_highscore_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:fontFamily="@font/pixelify_sans_bold"
+            android:gravity="center"
+            android:text="1. 0 AAA"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_highscore_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:fontFamily="@font/pixelify_sans_bold"
+            android:gravity="center"
+            android:text="1. 0 AAA"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_highscore_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:fontFamily="@font/pixelify_sans_bold"
+            android:gravity="center"
+            android:text="1. 0 AAA"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_highscore_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:fontFamily="@font/pixelify_sans_bold"
+            android:gravity="center"
+            android:text="1. 0 AAA"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
