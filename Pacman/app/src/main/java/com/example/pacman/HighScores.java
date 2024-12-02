@@ -37,20 +37,18 @@ public class HighScores extends AppCompatActivity {
         textViews[9] = (TextView) findViewById(R.id.text_highscore_9);
 
         displayHighScores();
-
-        //updateHighScores("jim", 9999);
     }
 
-    public void updateHighScores(String name, int score) {
+    public void updateHighScores(int score) {
         SharedPreferences prefs = getSharedPreferences("HIGH_SCORES", MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-        HighScorePair[] highScores = new HighScorePair[10];
+        int[] highScores = new int[10];
 
-        HighScorePair[] scores = getHighScores();
+        int[] scores = getHighScores();
 
         int pos = 10;
         for(int i = 0; i < 10; i++) {
-            if ( score > scores[i].score) {
+            if ( score > scores[i]) {
                 pos = i;
                 break;
             }
@@ -61,45 +59,32 @@ public class HighScores extends AppCompatActivity {
             return;
 
         for(int i = 10; i > pos; i--) {
-            editor.putInt("SCORES_" + i,  scores[i-1].score);
-            editor.putString("NAMES_" + i, scores[i-1].name);
+            editor.putInt("SCORES_" + i,  scores[i-1]);
         }
 
         editor.putInt("SCORES_" + pos, score);
-        editor.putString("NAMES_" + pos, name);
         editor.apply();
 
         displayHighScores();
     }
 
-    private HighScorePair[] getHighScores() {
+    private int[] getHighScores() {
         SharedPreferences prefs = getSharedPreferences("HIGH_SCORES", MODE_PRIVATE);
-        HighScorePair[] highScores = new HighScorePair[10];
+        int[] highScores = new int[10];
 
         for ( int i = 0; i < 10; i++ ) {
             int score = prefs.getInt("SCORES_" + i, 0);
-            String name = prefs.getString("NAMES_" + i, "AAA");
-            highScores[i] = new HighScorePair(name, score);
+            highScores[i] = score;
         }
         return highScores;
     }
 
     private void displayHighScores() {
-        HighScorePair[] scores = getHighScores();
+        int[] scores = getHighScores();
 
         for ( int i = 0; i < 10; i++ ) {
-            String text = (i+1) + ". " + scores[i].score + " " + scores[i].name;
+            String text = (i+1) + ". " + scores[i];
             textViews[i].setText(text);
-        }
-    }
-
-    private static class HighScorePair {
-        public final String name;
-        public int score;
-
-        public HighScorePair(String name, int score) {
-            this.name = name;
-            this.score = score;
         }
     }
 }
