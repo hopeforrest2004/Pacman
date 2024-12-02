@@ -1,4 +1,5 @@
 To run the app simply Extract the files from the download zip file, open the project file in android studio and then run.
+NOTE:  If you experience any issues with being unable to find your android sdk folder simply update the local.properties file with the correct path.
 
 There is no additional data required to test/use this application.
 
