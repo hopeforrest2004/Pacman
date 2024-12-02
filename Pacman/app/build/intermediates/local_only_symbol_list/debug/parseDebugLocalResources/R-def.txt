@@ -7,10 +7,12 @@ drawable dpad
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable pacmanclosed
+drawable pacmangameover
 drawable pacmanhighscorebutton
 drawable pacmanlogo
 drawable pacmanmouthopen
 drawable pacmanmouthwide
+drawable pacmanredghost
 drawable pacmanstartbutton
 drawable pacmanstartscreenbackground
 drawable pacmanstartscreenimage1
@@ -28,7 +30,9 @@ id dpad_left
 id dpad_right
 id dpad_up
 id gameView
+id goToMain
 id highscoreBtn
+id imageView
 id imageView3
 id main
 id nav_graph
@@ -36,10 +40,10 @@ id nav_graph2
 id nav_graph3
 id nav_graph4
 id pacmanBackground
-id pacmanClosed
 id pacmanImageView
 id pacmanLogo
 id pacmanOpen
+id redGhost
 id startBtn
 layout activity_death_scene
 layout activity_gameplay
@@ -52,6 +56,8 @@ navigation nav_graph
 navigation nav_graph2
 navigation nav_graph3
 navigation nav_graph4
+raw death
+raw intro_music
 string app_name
 string first_fragment_label
 string lorem_ipsum

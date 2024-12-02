@@ -4,10 +4,6 @@
         "source": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-main-45:\\drawable\\dpad.png"
     },
     {
-        "merged": "com.example.pacman.app-debug-43:/drawable_pacmanmouthopen.png.flat",
-        "source": "com.example.pacman.app-main-45:/drawable/pacmanmouthopen.png"
-    },
-    {
         "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\layout_activity_death_scene.xml.flat",
         "source": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-main-45:\\layout\\activity_death_scene.xml"
     },
@@ -36,6 +32,18 @@
         "source": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-main-45:\\xml\\data_extraction_rules.xml"
     },
     {
+        "merged": "com.example.pacman.app-debug-43:/layout_activity_death_scene.xml.flat",
+        "source": "com.example.pacman.app-main-45:/layout/activity_death_scene.xml"
+    },
+    {
+        "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\drawable_pacmanmouthopen.png.flat",
+        "source": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-main-45:\\drawable\\pacmanmouthopen.png"
+    },
+    {
+        "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\raw_intro_music.mp3.flat",
+        "source": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-main-45:\\raw\\intro_music.mp3"
+    },
+    {
         "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-main-45:\\mipmap-hdpi\\ic_launcher.webp"
     },
@@ -50,6 +58,10 @@
     {
         "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-main-45:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\drawable_pacmanredghost.png.flat",
+        "source": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-main-45:\\drawable\\pacmanredghost.png"
     },
     {
         "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -70,10 +82,6 @@
     {
         "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-main-45:\\mipmap-xxhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "com.example.pacman.app-debug-43:/drawable_pacmanclosed.png.flat",
-        "source": "com.example.pacman.app-main-45:/drawable/pacmanclosed.png"
     },
     {
         "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\mipmap-anydpi_ic_launcher.xml.flat",
@@ -116,8 +124,16 @@
         "source": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-main-45:\\drawable\\pacmanhighscorebutton.png"
     },
     {
-        "merged": "com.example.pacman.app-debug-43:/layout_activity_intro.xml.flat",
-        "source": "com.example.pacman.app-main-45:/layout/activity_intro.xml"
+        "merged": "com.example.pacman.app-debug-43:/raw_death.mp3.flat",
+        "source": "com.example.pacman.app-main-45:/raw/death.mp3"
+    },
+    {
+        "merged": "com.example.pacman.app-debug-43:/drawable_pacmangameover.png.flat",
+        "source": "com.example.pacman.app-main-45:/drawable/pacmangameover.png"
+    },
+    {
+        "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\drawable_pacmanmouthwide.png.flat",
+        "source": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-main-45:\\drawable\\pacmanmouthwide.png"
     },
     {
         "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\navigation_nav_graph4.xml.flat",
@@ -126,6 +142,10 @@
     {
         "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\drawable_pacmanstartbutton.png.flat",
         "source": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-main-45:\\drawable\\pacmanstartbutton.png"
+    },
+    {
+        "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\drawable_pacmanclosed.png.flat",
+        "source": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-main-45:\\drawable\\pacmanclosed.png"
     },
     {
         "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\layout_activity_main.xml.flat",
@@ -138,9 +158,5 @@
     {
         "merged": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-debug-43:\\drawable_temppacman.png.flat",
         "source": "C:\\Users\\forre\\.gradle\\daemon\\8.9\\com.example.pacman.app-main-45:\\drawable\\temppacman.png"
-    },
-    {
-        "merged": "com.example.pacman.app-debug-43:/drawable_pacmanmouthwide.png.flat",
-        "source": "com.example.pacman.app-main-45:/drawable/pacmanmouthwide.png"
     }
 ]

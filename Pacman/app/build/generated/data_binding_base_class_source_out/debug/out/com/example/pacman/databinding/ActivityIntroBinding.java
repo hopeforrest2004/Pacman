@@ -23,17 +23,17 @@ public final class ActivityIntroBinding implements ViewBinding {
   public final ConstraintLayout main;
 
   @NonNull
-  public final ImageView pacmanClosed;
-
-  @NonNull
   public final ImageView pacmanOpen;
 
+  @NonNull
+  public final ImageView redGhost;
+
   private ActivityIntroBinding(@NonNull ConstraintLayout rootView, @NonNull ConstraintLayout main,
-      @NonNull ImageView pacmanClosed, @NonNull ImageView pacmanOpen) {
+      @NonNull ImageView pacmanOpen, @NonNull ImageView redGhost) {
     this.rootView = rootView;
     this.main = main;
-    this.pacmanClosed = pacmanClosed;
     this.pacmanOpen = pacmanOpen;
+    this.redGhost = redGhost;
   }
 
   @Override
@@ -65,19 +65,19 @@ public final class ActivityIntroBinding implements ViewBinding {
     missingId: {
       ConstraintLayout main = (ConstraintLayout) rootView;
 
-      id = R.id.pacmanClosed;
-      ImageView pacmanClosed = ViewBindings.findChildViewById(rootView, id);
-      if (pacmanClosed == null) {
-        break missingId;
-      }
-
       id = R.id.pacmanOpen;
       ImageView pacmanOpen = ViewBindings.findChildViewById(rootView, id);
       if (pacmanOpen == null) {
         break missingId;
       }
 
-      return new ActivityIntroBinding((ConstraintLayout) rootView, main, pacmanClosed, pacmanOpen);
+      id = R.id.redGhost;
+      ImageView redGhost = ViewBindings.findChildViewById(rootView, id);
+      if (redGhost == null) {
+        break missingId;
+      }
+
+      return new ActivityIntroBinding((ConstraintLayout) rootView, main, pacmanOpen, redGhost);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

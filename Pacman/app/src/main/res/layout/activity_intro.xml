@@ -10,17 +10,17 @@
 
     <ImageView
         android:id="@+id/pacmanOpen"
-        android:layout_width="155dp"
-        android:layout_height="119dp"
+        android:layout_width="90dp"
+        android:layout_height="71dp"
         app:srcCompat="@drawable/pacmanmouthopen"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="75dp" />
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="209dp" />
 
     <ImageView
-        android:id="@+id/pacmanClosed"
-        android:layout_width="158dp"
-        android:layout_height="121dp"
-        app:srcCompat="@drawable/pacmanclosed"
+        android:id="@+id/redGhost"
+        android:layout_width="74dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/pacmanredghost"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="194dp" />
+        tools:layout_editor_absoluteY="201dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

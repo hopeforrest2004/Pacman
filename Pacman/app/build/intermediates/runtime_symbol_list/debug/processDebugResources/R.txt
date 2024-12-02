@@ -3141,10 +3141,12 @@ int drawable notification_template_icon_low_bg 0x7f0700e2
 int drawable notification_tile_bg 0x7f0700e3
 int drawable notify_panel_notification_icon_bg 0x7f0700e4
 int drawable pacmanclosed 0x7f0700ee
+int drawable pacmangameover 0x7f0700f2
 int drawable pacmanhighscorebutton 0x7f0700ed
 int drawable pacmanlogo 0x7f0700e9
 int drawable pacmanmouthopen 0x7f0700ef
 int drawable pacmanmouthwide 0x7f0700f0
+int drawable pacmanredghost 0x7f0700f1
 int drawable pacmanstartbutton 0x7f0700ec
 int drawable pacmanstartscreenbackground 0x7f0700ea
 int drawable pacmanstartscreenimage1 0x7f0700eb
@@ -3368,6 +3370,7 @@ int id fullscreen_header 0x7f0800d4
 int id gameView 0x7f0800d5
 int id ghost_view 0x7f0800d6
 int id ghost_view_holder 0x7f0800d7
+int id goToMain 0x7f08021e
 int id gone 0x7f0800d8
 int id graph 0x7f0800d9
 int id graph_wrap 0x7f0800da
@@ -3388,6 +3391,7 @@ int id ifRoom 0x7f0800e7
 int id ignore 0x7f0800e8
 int id ignoreRequest 0x7f0800e9
 int id image 0x7f0800ea
+int id imageView 0x7f08021f
 int id imageView3 0x7f0800eb
 int id immediateStop 0x7f0800ec
 int id included 0x7f0800ed
@@ -3518,7 +3522,6 @@ int id outward 0x7f08016a
 int id overshoot 0x7f08016b
 int id packed 0x7f08016c
 int id pacmanBackground 0x7f080218
-int id pacmanClosed 0x7f08021b
 int id pacmanImageView 0x7f080219
 int id pacmanLogo 0x7f08021a
 int id pacmanOpen 0x7f08021c
@@ -3541,6 +3544,7 @@ int id progress_horizontal 0x7f08017c
 int id radio 0x7f08017d
 int id ratio 0x7f08017e
 int id rectangles 0x7f08017f
+int id redGhost 0x7f08021d
 int id report_drawn 0x7f080180
 int id reverseSawtooth 0x7f080181
 int id right 0x7f080182
@@ -3892,6 +3896,8 @@ int navigation nav_graph2 0x7f0e0001
 int navigation nav_graph3 0x7f0e0002
 int navigation nav_graph4 0x7f0e0003
 int plurals mtrl_badge_content_description 0x7f0f0000
+int raw death 0x7f140001
+int raw intro_music 0x7f140000
 int string abc_action_bar_home_description 0x7f100000
 int string abc_action_bar_up_description 0x7f100001
 int string abc_action_menu_overflow_description 0x7f100002

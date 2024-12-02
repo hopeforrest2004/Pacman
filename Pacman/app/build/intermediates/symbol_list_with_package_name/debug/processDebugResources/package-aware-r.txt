@@ -3142,10 +3142,12 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable pacmanclosed
+drawable pacmangameover
 drawable pacmanhighscorebutton
 drawable pacmanlogo
 drawable pacmanmouthopen
 drawable pacmanmouthwide
+drawable pacmanredghost
 drawable pacmanstartbutton
 drawable pacmanstartscreenbackground
 drawable pacmanstartscreenimage1
@@ -3369,6 +3371,7 @@ id fullscreen_header
 id gameView
 id ghost_view
 id ghost_view_holder
+id goToMain
 id gone
 id graph
 id graph_wrap
@@ -3389,6 +3392,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id imageView3
 id immediateStop
 id included
@@ -3519,7 +3523,6 @@ id outward
 id overshoot
 id packed
 id pacmanBackground
-id pacmanClosed
 id pacmanImageView
 id pacmanLogo
 id pacmanOpen
@@ -3542,6 +3545,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id redGhost
 id report_drawn
 id reverseSawtooth
 id right
@@ -3893,6 +3897,8 @@ navigation nav_graph2
 navigation nav_graph3
 navigation nav_graph4
 plurals mtrl_badge_content_description
+raw death
+raw intro_music
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
