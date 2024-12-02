@@ -5,6 +5,7 @@
 package com.example.pacman.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -16,6 +17,9 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.pacman.DeathScene;
+import com.example.pacman.HighScores;
+import com.example.pacman.MainActivity;
 import com.example.pacman.R;
 import com.example.pacman.model.Ghost;
 import com.example.pacman.model.PacmanPosition;
@@ -56,7 +60,7 @@ public class GameView extends View {
     private float pacmanOffsetX = 0, pacmanOffsetY = 0;
     private float ghostOffsetX = 0, ghostOffsetY = 0;
     public int score;
-    private int lives = 3;
+    public int lives = 3;
     private int directionX = 0, directionY = 0;
 
     private Paint wallPaint, pelletPaint, powerPelletPaint, pacmanPaint, ghostPaint;
@@ -119,7 +123,7 @@ public class GameView extends View {
             public void run() {
                 updateGame();
                 invalidate(); // Redraw the view
-                gameHandler.postDelayed(this, 300); // ~60 FPS
+                gameHandler.postDelayed(this, 300);// ~60 FPS
             }
         };
         gameHandler.post(gameRunnable);
@@ -296,6 +300,15 @@ public class GameView extends View {
             }
         }
 
+    }
+
+    public int checkLives(){
+        if (lives <= 0){
+            return 0;
+        }
+        else {
+            return 1;
+        }
     }
 
 

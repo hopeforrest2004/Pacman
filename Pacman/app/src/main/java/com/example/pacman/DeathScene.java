@@ -36,7 +36,7 @@ public class DeathScene extends AppCompatActivity {
             startActivity(intent);
         });
         mediaPlayer = MediaPlayer.create(this, R.raw.death);
-        //mediaPlayer.start();
+        mediaPlayer.start();
 
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.start();
