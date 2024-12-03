@@ -17,8 +17,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.pacman.controller.ScoreController;
+import com.google.android.material.color.utilities.Score;
+
 public class HighScores extends AppCompatActivity {
 
+    private final ScoreController scoreController = new ScoreController();
     private final TextView[] textViews = new TextView[10];
 
     /**
@@ -53,67 +57,13 @@ public class HighScores extends AppCompatActivity {
     }
 
     /**
-     * Updates the high scores if the provided score is higher than any existing high score.
-     * The new score is inserted in the correct position, and the high scores are saved to SharedPreferences.
-     * After updating, the high scores are displayed.
-     *
-     * @param score The score to be added to the high scores list.
-     */
-
-    public void updateHighScores(int score) {
-        SharedPreferences prefs = getSharedPreferences("HIGH_SCORES", MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-
-        int[] scores = getHighScores();
-
-        int pos = 10;
-        for(int i = 0; i < 10; i++) {
-            if ( score > scores[i]) {
-                pos = i;
-                break;
-            }
-        }
-
-        // Not a highscore
-        if(pos == 10)
-            return;
-
-        for(int i = 10; i > pos; i--) {
-            editor.putInt("SCORES_" + i,  scores[i-1]);
-        }
-
-        editor.putInt("SCORES_" + pos, score);
-        editor.apply();
-
-        displayHighScores();
-    }
-
-    /**
-     * Retrieves the top 10 high scores from SharedPreferences.
-     * Each high score is stored as an integer, and an array of high scores is returned.
-     *
-     * @return An array of integers representing the top 10 high scores.
-     */
-
-    private int[] getHighScores() {
-        SharedPreferences prefs = getSharedPreferences("HIGH_SCORES", MODE_PRIVATE);
-        int[] highScores = new int[10];
-
-        for ( int i = 0; i < 10; i++ ) {
-            int score = prefs.getInt("SCORES_" + i, 0);
-            highScores[i] = score;
-        }
-        return highScores;
-    }
-
-    /**
      * Displays the top 10 high scores in the corresponding TextViews.
      * This method fetches the high scores using `getHighScores()` and updates each TextView
      * with the corresponding rank and score.
      */
 
     private void displayHighScores() {
-        int[] scores = getHighScores();
+        int[] scores = scoreController.getHighScores(getApplicationContext());
 
         for ( int i = 0; i < 10; i++ ) {
             String text = (i+1) + ". " + scores[i];

@@ -19,6 +19,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.pacman.controller.GameplayController;
+import com.example.pacman.controller.ScoreController;
 import com.example.pacman.model.Ghost;
 import com.example.pacman.model.PacmanPosition;
 import com.example.pacman.view.GameView;
@@ -98,12 +99,20 @@ public class Gameplay extends AppCompatActivity {
                 // Handle game over or victory conditions
                 if (gameView.lives <= 0) {
                     gameView.lives = 3;
+
+                    ScoreController scoreController = new ScoreController();
+                    scoreController.updateHighScores(getApplicationContext(), gameView.score);
+
                     Intent intent = new Intent(Gameplay.this, DeathScene.class);
                     startActivity(intent);
                     finish();
                 }
                 if (gameView.score >= 263) {
                     gameView.score = 0;
+
+                    ScoreController scoreController = new ScoreController();
+                    scoreController.updateHighScores(getApplicationContext(), gameView.score);
+
                     Intent intent = new Intent(Gameplay.this, MainActivity.class);
                     Toast.makeText(Gameplay.this, "You win!", Toast.LENGTH_SHORT).show();
                     startActivity(intent);
