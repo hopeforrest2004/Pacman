@@ -1,7 +1,32 @@
-To run the app simply Extract the files from the download zip file, open the project file in android studio and then run.
-NOTE:  If you experience any issues with being unable to find your android sdk folder simply update the local.properties file with the correct path.
+Cloning the Repository:
 
-There is no additional data required to test/use this application.
+Open your terminal
+Navigate to the directory where you want to clone the project.
+Run the following command to clone the repository:
+
+git clone https://github.com/hopeforrest2004/Pacman.git
+
+Once the project is cloned, navigate into the project folder:
+
+cd Pacman
+
+Importing the Project into Android Studio
+
+Open Android Studio on your computer.
+Click on File in the top menu and select Open.
+In the dialog that appears, navigate to the folder where you cloned the repository and select the project folder (Pacman).
+Click OK to open the project in Android Studio.
+
+
+Running the Application
+Once the project is opened in Android Studio, wait for Android Studio to finish syncing the project.
+Make sure you have an Android emulator running.
+In Android Studio, select the Run button (green triangle) .
+Select your desired device or emulator from the device selection dialog that appears.
+The application will now build and run on the selected device.
+
+
+Note: There is no additional data required to test/use this application so once you run the app you should be able to get to every View.
 
 Features of the app:
 1.  Main Menu with an option to start the game or view the high scores
