@@ -16,7 +16,7 @@ There is only 1 level and once the level has been beaten the game ends.
 
 There is no JavaDoc for this project because we spent 4-5 hours attempting to solve the errors that came up:
 
-There was no documentation about anyone encountering this sort of issue online and there was no resources in the class slides that we could use to resolve this.  This happened on multiple people's computers and as such we believe it to be a bug with android studio and or Gradle and we feel that this should be taken into account.
+There was no documentation about anyone encountering this sort of issue online and there was no resources in the class slides that we could use to resolve this.  This happened on multiple people's computers and as such we believe it to be a bug with android studio and or Gradle and we feel that this should be taken into account.  However, we have manually added the comments to the files instead of having the java doc.
 
 C:\Users\mdspe\AppData\Local\Android\Sdk\sources\android-34\android\content\pm\PackageManager.java:19: error: cannot find symbol
 import android.Manifest;
