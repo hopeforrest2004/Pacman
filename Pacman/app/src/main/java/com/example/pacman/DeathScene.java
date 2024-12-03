@@ -1,3 +1,7 @@
+/**
+ * This class represents the death screen activity.
+ * @author Forrest Hope
+ */
 package com.example.pacman;
 
 import android.animation.Animator;
@@ -19,6 +23,14 @@ public class DeathScene extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;
 
+    /**
+     * Called when the activity is created. This method sets up the layout,
+     * handles system window insets, initializes the "Go to Main" button,
+     * and starts playing the death sound. It also sets up an animation to play
+     * upon entry, and stops the media player when the animation ends.
+     *
+     * @param savedInstanceState A Bundle containing the activity's previously saved state.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +66,10 @@ public class DeathScene extends AppCompatActivity {
 
     }
 
+    /**
+     * Called when the activity is destroyed. This method ensures that the media player
+     * is properly stopped and released to free resources when the activity is destroyed.
+     */
     @Override
     protected void onDestroy(){
         super.onDestroy();
