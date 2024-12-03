@@ -1,3 +1,7 @@
+/**
+ * This class represents the main activity/title screen.
+ * @author Forrest Hope
+ */
 package com.example.pacman;
 
 import android.content.Intent;
@@ -15,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Called when the activity is first created.
-     */
+     *
+     * @param savedInstanceState A Bundle containing the activity's previously saved state.
+     **/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

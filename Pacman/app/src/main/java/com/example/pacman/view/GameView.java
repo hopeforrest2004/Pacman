@@ -1,6 +1,8 @@
 /**
  * This class represents the game view.
  * @author Emir J. Calvillo
+ * @author Andrew J. Martin
+ * @author Merritt Spencer
  */
 package com.example.pacman.view;
 
@@ -63,27 +65,43 @@ public class GameView extends View {
     public int lives = 3;
     private int directionX = 0, directionY = 0;
 
-    private Paint wallPaint, pelletPaint, powerPelletPaint, pacmanPaint, ghostPaint;
+    private Paint wallPaint, pelletPaint, powerPelletPaint;
     private Handler gameHandler = new Handler();
     private Runnable gameRunnable;
     private Bitmap pacmanBitmap, ghostBitmapOne, ghostBitmapTwo, ghostBitmapThree;
     private PacmanPosition pacmanPosition;
     private Ghost ghostOne,ghostTwo,ghostThree;
-    private int viewWidth;
-    private int viewHeight;
     private TextView lifeCounter, scoreCounter;
 
-
+    /**
+     * Constructor for the GameView class, initializing paints, bitmaps, and starting the game loop.
+     *
+     * @param context the context of the application
+     * @param attrs the attributes set for the view
+     */
     public GameView(Context context, AttributeSet attrs) {
-
         super(context, attrs);
         initializePaints();
         loadBitmaps();
         startGameLoop();
     }
+
+    /**
+     * Sets the position of Pac-Man on the grid.
+     *
+     * @param pacmanPos the PacManPosition object representing Pac-Man's position
+     */
     public void setPacmanPosition(PacmanPosition pacmanPos) {
         this.pacmanPosition = pacmanPos;
     }
+
+    /**
+     * Sets the positions of the three ghosts on the grid.
+     *
+     * @param ghostOnePos the position of the first ghost
+     * @param ghostTwoPos the position of the second ghost
+     * @param ghostThreePos the position of the third ghost
+     */
     public void setGhostPosition(Ghost ghostOnePos, Ghost ghostTwoPos, Ghost ghostThreePos) {
         this.ghostOne = ghostOnePos;
         this.ghostTwo = ghostTwoPos;
@@ -91,15 +109,29 @@ public class GameView extends View {
 
     }
 
+    /**
+     * Sets the TextView that displays the number of lives.
+     *
+     * @param lifeCounter the TextView to display the number of lives
+     */
     public void setLifeCounter(TextView lifeCounter) {
         this.lifeCounter = lifeCounter;
         lifeCounter.setText(String.valueOf(lives));
     }
 
+    /**
+     * Sets the TextView that displays the score.
+     *
+     * @param scoreCounter the TextView to display the score
+     */
     public void setScoreCounter(TextView scoreCounter) {
         this.scoreCounter = scoreCounter;
         scoreCounter.setText(String.valueOf(score));
     }
+
+    /**
+     * Initializes the Paint objects used to draw walls, pellets, and power pellets.
+     */
     private void initializePaints() {
         wallPaint = new Paint();
         wallPaint.setColor(Color.BLUE);
@@ -111,12 +143,19 @@ public class GameView extends View {
         powerPelletPaint.setColor(Color.RED);
     }
 
+    /**
+     * Loads the bitmap images for Pac-Man and the ghosts.
+     */
     private void loadBitmaps() {
         pacmanBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.temppacman);
         ghostBitmapOne = BitmapFactory.decodeResource(getResources(), R.drawable.ghost);
         ghostBitmapTwo = BitmapFactory.decodeResource(getResources(), R.drawable.ghost);
         ghostBitmapThree = BitmapFactory.decodeResource(getResources(), R.drawable.ghost);
     }
+
+    /**
+     * Starts the game loop that updates the game state at regular intervals.
+     */
     private void startGameLoop() {
         gameRunnable = new Runnable() {
             @Override
@@ -129,6 +168,11 @@ public class GameView extends View {
         gameHandler.post(gameRunnable);
     }
 
+    /**
+     * Called to draw the game view, including the walls, pellets, Pac-Man, and ghosts.
+     *
+     * @param canvas the canvas on which to draw the game scene
+     */
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -220,6 +264,9 @@ public class GameView extends View {
     private float lastPacmanX = 1;
     private float lastPacmanY = 1;
 
+    /**
+     * Updates the game state, including Pac-Man's movement, pellet collection, and ghost movements.
+     */
     private void updateGame() {
         // Check if Pac-Man has moved
         boolean hasPacmanMoved = (pacmanPosition.getPacmanX() != lastPacmanX || pacmanPosition.getPacmanY() != lastPacmanY);
@@ -259,16 +306,32 @@ public class GameView extends View {
 
     }
 
+    /**
+     * Checks if Pac-Man can move to a given position based on the current level data.
+     *
+     * @param x the x-coordinate to check
+     * @param y the y-coordinate to check
+     * @return true if the position is valid for Pac-Man to move
+     */
     private boolean canMove(int x, int y) {
         return x >= 0 && y >= 0 && x < levelData[0].length && y < levelData.length && levelData[y][x] != 0; // Not a wall
     }
 
+    /**
+     * Checks if Pac-Man has collided with any ghost.
+     *
+     * @param ghost the ghost to check for collision
+     * @return true if Pac-Man and the ghost occupy the same grid cell
+     */
     private boolean checkCollision(Ghost ghost) {
         return (pacmanPosition.getPacmanX() == ghost.getGhostX() && pacmanPosition.getPacmanY() == ghost.getGhostY());
     }
 
-    // Moves the Ghost towards Pacman
-
+    /**
+     * Moves a ghost towards Pac-Man using AI logic.
+     *
+     * @param ghost the ghost to move
+     */
     public void ghostMove(Ghost ghost) {
         // Try to move in the ghostX direction first
         if (pacmanPosition.getPacmanX() < ghost.getGhostX() && canMove(ghost.getGhostX() - 1, ghost.getGhostY())) {
@@ -302,6 +365,12 @@ public class GameView extends View {
 
     }
 
+
+    /**
+     * Checks the number of lives remaining. If no lives are left, the game is over.
+     *
+     * @return 1 if lives are remaining, 0 if the game is over
+     */
     public int checkLives(){
         if (lives <= 0){
             return 0;
@@ -311,7 +380,12 @@ public class GameView extends View {
         }
     }
 
-
+    /**
+     * Sets the direction for Pac-Man's movement.
+     *
+     * @param dx the change in the x-direction
+     * @param dy the change in the y-direction
+     */
     public void setDirection(int dx, int dy) {
         directionX = dx;
         directionY = dy;

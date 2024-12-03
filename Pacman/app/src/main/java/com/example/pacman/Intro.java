@@ -1,3 +1,7 @@
+/**
+ * This class represents the intro scene.
+ * @author Forrest Hope
+ */
 package com.example.pacman;
 
 import android.animation.Animator;
@@ -20,6 +24,14 @@ import android.os.Handler;
 public class Intro extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;
+
+    /**
+     * Called when the activity is created. This method initializes the layout, sets up system window insets,
+     * prepares the animations for the Pacman and ghost characters, and starts the animations. It also plays
+     * an introductory music track and navigates to the gameplay activity after the animation ends.
+     *
+     * @param savedInstanceState A Bundle containing the activity's previously saved state.
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +112,11 @@ public class Intro extends AppCompatActivity {
         });
 
     }
+
+    /**
+     * Called when the activity is being destroyed. This method stops and releases the media player resources
+     * to prevent memory leaks.
+     */
 
     @Override
     protected void onDestroy(){

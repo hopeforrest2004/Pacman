@@ -1,7 +1,14 @@
+/**
+ * This class represents the high scores activity.
+ * @author Justin Gaspar
+ */
+
 package com.example.pacman;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -14,6 +21,12 @@ public class HighScores extends AppCompatActivity {
 
     private final TextView[] textViews = new TextView[10];
 
+    /**
+     * Called when the activity is created. This method sets up the layout, handles system window insets,
+     * initializes the text views for displaying high scores, and calls a method to display the high scores.
+     *
+     * @param savedInstanceState A Bundle containing the activity's previously saved state.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,10 +52,17 @@ public class HighScores extends AppCompatActivity {
         displayHighScores();
     }
 
+    /**
+     * Updates the high scores if the provided score is higher than any existing high score.
+     * The new score is inserted in the correct position, and the high scores are saved to SharedPreferences.
+     * After updating, the high scores are displayed.
+     *
+     * @param score The score to be added to the high scores list.
+     */
+
     public void updateHighScores(int score) {
         SharedPreferences prefs = getSharedPreferences("HIGH_SCORES", MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-        int[] highScores = new int[10];
 
         int[] scores = getHighScores();
 
@@ -68,6 +88,13 @@ public class HighScores extends AppCompatActivity {
         displayHighScores();
     }
 
+    /**
+     * Retrieves the top 10 high scores from SharedPreferences.
+     * Each high score is stored as an integer, and an array of high scores is returned.
+     *
+     * @return An array of integers representing the top 10 high scores.
+     */
+
     private int[] getHighScores() {
         SharedPreferences prefs = getSharedPreferences("HIGH_SCORES", MODE_PRIVATE);
         int[] highScores = new int[10];
@@ -78,6 +105,12 @@ public class HighScores extends AppCompatActivity {
         }
         return highScores;
     }
+
+    /**
+     * Displays the top 10 high scores in the corresponding TextViews.
+     * This method fetches the high scores using `getHighScores()` and updates each TextView
+     * with the corresponding rank and score.
+     */
 
     private void displayHighScores() {
         int[] scores = getHighScores();
